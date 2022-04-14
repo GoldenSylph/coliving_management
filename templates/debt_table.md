@@ -1,0 +1,3 @@
+# The debt table
+
+{{ table }}
