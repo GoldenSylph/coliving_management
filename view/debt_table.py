@@ -12,5 +12,6 @@ class DebtTable:
         self.template = self.env.get_template("debt_table.md")
 
 
-    def render(self, data: UsersMatrix):
+    def render(self, data: UsersMatrix) -> str:
+        # self.template
         ...
