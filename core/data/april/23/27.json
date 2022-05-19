@@ -1,0 +1,15 @@
+{
+    "payment_date": "2022-04-23",
+    "payment_time": "00:00",
+    "payer": "oleg",
+    "bill": "2200",
+    "payers": [
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        }
+    ],
+    "description": "SAS khachapuri"
+}

@@ -1,0 +1,24 @@
+{
+    "payment_date": "2022-04-19",
+    "payment_time": "00:00",
+    "payer": "polina",
+    "bill": "3500",
+    "payers": [
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        },
+        {
+            "payer": "polina"
+        },
+        {
+            "payer": "polina"
+        }
+    ],
+    "description": "cucumbers and tomatoes"
+}

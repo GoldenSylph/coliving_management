@@ -1,0 +1,24 @@
+{
+    "payment_date": "2022-04-21",
+    "payment_time": "00:00",
+    "payer": "oleg",
+    "bill": "2650",
+    "payers": [
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        },
+        {
+            "payer": "oleg"
+        },
+        {
+            "payer": "oleg"
+        }
+    ],
+    "description": "SAS food"
+}

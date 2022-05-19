@@ -2,56 +2,48 @@
 
 import os
 import asyncio
-import aiohttp
 
-from enum import Enum
 from dotenv import load_dotenv
 from telebot.async_telebot import AsyncTeleBot
 from telebot import types
 
+from forms.base import Context
+from forms.states import AddPaymentDateState
+
 load_dotenv()
 bot = AsyncTeleBot(os.environ["TELEGRAM_API_KEY"], parse_mode="MARKDOWN")
+context = Context()
 
-class State(Enum):
-    START = 0
-    DEBTS = 1
-    INFO = 2
-
-current_state = State.START
-
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start', 'help'])
 async def start_controller(message):
-    current_state = State.START
+    context.set_state(None)
     markup = types.ReplyKeyboardMarkup(row_width=2)
-    debts_button = types.KeyboardButton('Debts')
-    info_button = types.KeyboardButton('Info')
+    debts_button = types.KeyboardButton('/add_debt')
+    info_button = types.KeyboardButton('/info')
     markup.add(debts_button, info_button)
     await bot.reply_to(message, 'Hi! Choose the mode:', reply_markup=markup)
 
 
-@bot.message_handler(func: lambda message: True)
-async def state_controller(message):
-    markup = types.ReplyKeyboardMarkup(row_width=2)
-    if current_state == State.START:
-        if message.text == "Debts":
-            current_state = State.DEBTS
-            await bot.reply_to(message, )
-            
-        elif message.text == "Info":
-            current_state = State.INFO
-            await bot.reply_to(message, 'Just jab something...')
-        else:
-            await bot.reply_to(message, 'Please use the buttons or type "/start".')
-    elif current_state == State.DEBTS:
-        add_me_button = types.KeyboardButton('Add me to the list')
-        record_debt_button = types.KeyboardButton('Record debt')
-        markup.add(add_me_button, record_debt_button)
-        await bot.reply_to(message, 'Ok, let\'s start with debts management:', reply_markup=markup)
-    elif current_state == State.INFO:
-        await bot.reply_to(message, 'This is a small coliving management bot for our friends. Made by Oleg and Dima.')
-        current_state = State.START
+@bot.message_handler(commands=['add_debt'])
+async def debts_controller(message):
+    if context.current_state == None:
+        context.set_state(AddPaymentDateState())
+    markup = types.ReplyKeyboardRemove(selective=False)
+    await bot.reply_to(message, "We are starting the Adding Debt Form", reply_markup=markup)
+    await context.action(bot, message)
+
+
+@bot.message_handler(func=lambda m: True)
+async def context_controller(message):
+    if context.current_state == None:
+        await bot.reply_to(message, "Please use the buttons or type valid command.")
     else:
-        await bot.reply_to(message, 'AN UNKNOWN STATE, PLEASE ADDRESS THE ADMINISTRATION')
+        await context.action(bot, message)
+
+
+@bot.message_handler(commands=['info'])
+async def info_controller(message):
+    await bot.reply_to(message, 'The authors are: Dmitry Zanadvornych, Oleg Bedrin')
 
 
 if __name__ == "__main__":

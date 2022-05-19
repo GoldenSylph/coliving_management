@@ -1,0 +1,24 @@
+{
+    "payment_date": "2022-04-23",
+    "payment_time": "00:00",
+    "payer": "polina",
+    "bill": "6900",
+    "payers": [
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        },
+        {
+            "payer": "polina"
+        },
+        {
+            "payer": "polina"
+        }
+    ],
+    "description": "restaurant"
+}

@@ -1,0 +1,29 @@
+{
+    "payment_date": "2022-04-00",
+    "payment_time": "00:00",
+    "payer": "",
+    "bill": 0,
+    "payers": [
+        {
+            "payer": "zhenya",
+            "sum_": 0
+        },
+        {
+            "payer": "dasha",
+            "sum_": 0
+        },
+        {
+            "payer": "dima",
+            "sum_": 0
+        },
+        {
+            "payer": "polina",
+            "sum_": 0
+        },
+        {
+            "payer": "oleg",
+            "sum_": 0
+        }
+    ],
+    "description": "SAS"
+}

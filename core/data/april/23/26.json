@@ -1,0 +1,15 @@
+{
+    "payment_date": "2022-04-23",
+    "payment_time": "00:00",
+    "payer": "oleg",
+    "bill": "13330",
+    "payers": [
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        }
+    ],
+    "description": "SAS wine and vkusnyashkis"
+}

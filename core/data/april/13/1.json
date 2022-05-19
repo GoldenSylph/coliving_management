@@ -1,0 +1,15 @@
+{
+    "payment_date": "2022-04-13",
+    "payment_time": "00:00",
+    "payer": "dasha",
+    "bill": "13260",
+    "payers": [
+        {
+            "payer": "dima"
+        },
+        {
+            "payer": "zhenya"
+        }
+    ],
+    "description": "Erevan city"
+}

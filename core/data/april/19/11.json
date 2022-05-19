@@ -1,0 +1,24 @@
+{
+    "payment_date": "2022-04-19",
+    "payment_time": "00:00",
+    "payer": "zhenya",
+    "bill": "1630",
+    "payers": [
+        {
+            "payer": "polina"
+        },
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "dima"
+        },
+        {
+            "payer": "oleg"
+        }
+    ],
+    "description": "Fruits and vegetables"
+}

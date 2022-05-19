@@ -1,0 +1,28 @@
+{
+    "payment_date": "2022-04-23",
+    "payment_time": "00:00",
+    "payer": "zhenya",
+    "bill": "5140",
+    "payers": [
+        {
+            "payer": "polina",
+            "sum_": "985"
+        },
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha",
+            "sum_": "1285"
+        },
+        {
+            "payer": "dima",
+            "sum_": "1285"
+        },
+        {
+            "payer": "oleg",
+            "sum_": "985"
+        }
+    ],
+    "description": "SAS food court"
+}

@@ -1,0 +1,21 @@
+{
+    "payment_date": "2022-04-21",
+    "payment_time": "00:00",
+    "payer": "zhenya",
+    "bill": "2300",
+    "payers": [
+        {
+            "payer": "polina"
+        },
+        {
+            "payer": "zhenya"
+        },
+        {
+            "payer": "dasha"
+        },
+        {
+            "payer": "oleg"
+        }
+    ],
+    "description": "taxi"
+}

@@ -1,0 +1,17 @@
+{
+    "payment_date": "2022-04-22",
+    "payment_time": "00:00",
+    "payer": "polina",
+    "bill": 0,
+    "payers": [
+        {
+            "payer": "dasha",
+            "sum_": 0
+        },
+        {
+            "payer": "dima",
+            "sum_": 0
+        }
+    ],
+    "description": "SAS kebabs"
+}

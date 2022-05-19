@@ -1,0 +1,16 @@
+{
+    "payment_date": "2022-04-22",
+    "payment_time": "00:00",
+    "payer": "polina",
+    "bill": "4050",
+    "payers": [
+        {
+            "payer": "zhenya",
+            "sum_": "1350"
+        },
+        {
+            "payer": "polina"
+        }
+    ],
+    "description": "SAS blins"
+}

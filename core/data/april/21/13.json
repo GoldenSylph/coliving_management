@@ -1,0 +1,24 @@
+{
+    "payment_date": "2022-04-21",
+    "payment_time": "00:00",
+    "payer": "oleg",
+    "bill": "6490",
+    "payers": [
+        {
+            "payer": "zhenya",
+            "sum_": "1350"
+        },
+        {
+            "payer": "dasha",
+            "sum_": "1100"
+        },
+        {
+            "payer": "dima",
+            "sum_": "1100"
+        },
+        {
+            "payer": "oleg"
+        }
+    ],
+    "description": "SAS blin and kebabs"
+}

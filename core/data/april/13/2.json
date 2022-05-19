@@ -1,0 +1,12 @@
+{
+    "payment_date": "2022-04-13",
+    "payment_time": "00:00",
+    "payer": "dasha",
+    "bill": "930",
+    "payers": [
+        {
+            "payer": "zhenya"
+        }
+    ],
+    "description": "Erevan city/ ice cream"
+}
