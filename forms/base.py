@@ -12,14 +12,15 @@ class Context:
 class State(metaclass=ABCMeta):
 
     @abstractmethod
-    def is_valid(self, message) -> bool:
+    def is_valid(self, message) -> str:
         ...
 
     async def action(self, bot, message, context: Context) -> None:
-        if self.is_valid(message):
+        validation_message = self.is_valid(message)
+        if validation_message == None:
             await self.action_body(bot, message, context)
         else:
-            await bot.reply_to(message, "Message is not valid, please try again.")
+            await bot.reply_to(message, validation_message)
 
     @abstractmethod
     async def action_body(self, bot, message, context: Context) -> None:
